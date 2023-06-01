@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>      
+  <title>Desktop</title>
+  <style>
+  .container {
+    margin: 0 auto;
+    width: 1000px;
+    height: 500px;
+    border: 1px #000 solid;
+    position: relative;
+    text-align: center;
+    background-color: white;
+  }
+  .messages {
+    margin: 0 auto;
+    width: 830px;
+    height: 500px;
+    border: 1px #000 solid;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    background-color: white;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-image: url("https://seeklogo.com/images/A/android-messages-logo-020799A598-seeklogo.com.png");
+    transition: 0.5s;
+    font-size: 90px;
+    background-position: center;
+    background-size: 100px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50px;
+  }
+  .profile {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-image: url("https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png");
+    transition: 0.5s;
+    font-size: 50px;
+    background-position: center;
+    background-size: 100px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50px;
+    top: -50px;
+    left: 30px;
+  }
+  .alert {
+    width: 15px;
+    height: 15px;
+    border: 1px #000 solid;
+    position: absolute;
+    background: red;
+    transition: 0.5s;
+    right: 0;
+    top: 0;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+  .body {
+    background-image: url("https://external-preview.redd.it/uhq5zTcMPM3tOW_fbUz4PayDt_5pkEXdyXXoRWs3XOg.jpg?auto=webp&s=e06461124c1ccfdba7e9ece763b644ff68eeb06b");
+    background-position: absolute;
+    background-size: 2000px;
+    background-repeat: no-repeat;
+  }
+  .close{
+    width: 15px;
+    height: 15px;
+    border: 1px #000 solid;
+    background-color: red;
+    cursor: pointer;
+  }
+  .return{
+    width: 50px;
+    height: 50px;
+    background-image: url("https://t3.ftcdn.net/jpg/01/09/40/34/360_F_109403486_jUKrxzPeDASvx3oGhTZjzGHIUwWAWHi6.jpg");
+    background-size: 58px;
+    cursor: pointer;
+  }
+  .user{
+    position:relative;
+    left: -350px;
+    font-size:40px;
+  }
+  .text{
+    list-style: none;
+    position: relative;
+    padding: 3px 0 2px 25px;
+    font-size:30px;
+    left: 10px;
+    top: -30px;
+  }
+  li.other::before{
+    content: 'Joe:';
+    position: absolute;
+    left: 0;
+  }
+  li.you::before{
+    content: 'You:';
+    position: absolute;
+    left: 0;
+  }
+  .type{
+    position: relative;
+    top: -50px;
+    width: 800px;
+    height: 50px;
+    border: 3px #000 solid;
+    font-size: 30px;
+  }
+  </style>
+  <link rel="icon" type="image/jpg" href="https://www.shamesjcc.org/wp-content/uploads/2022/04/no-scam.jpg">
+  </head>
+</head>
+<body class = "body">
+  <h1 id="session">Intro Session</h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <div class="box" id = "box" type = "button">
+      <div class="alert" id = "alert">1</div>
+    </div>
+    <section class="container" id = "container" hidden>
+      <div class="close" id = "close">X</div>
+      <ul style="position:relative;top:-30px;left:-430px;font-size:40px;">Friends:</ul>
+      <div class="profile" id = "profile" type = "button"></div>
+      <ul style="position:relative;top:-80px;left:-440px;font-size:30px;">Joe</ul>
+      <section class="messages" id = "messages" hidden>
+        <div class="return" id = "return"></div>
+          <ul class = "text" id = "text">
+            <li class = "other" id = "other">Hey, check out this link. You can get free V-Bucks this way!
+              <a href="./session">TotallyNotAScam.net</a>
+            </li>
+          </ul>
+        </div>
+        <input class = "type" id = "type" type = "text" value = "Type Here">
+      </section>
+    </section>
+    <div id="logout">
+      <input id="logout" type="button" value="Logout" style="position:fixed;bottom:0;left:0;" />
+    </div>
+    <audio id="audio" autoplay loop src="https://deltarune.com/assets/audio/midi-spamton.mp3
+"></audio>
+    <input type="button" id="musicButton" value="Play Music" onclick="handleButtonClick()" style="position:fixed;bottom:0;right:0;">
+    <script src="js/intro.js">
+</script>
+</body>
+</html>

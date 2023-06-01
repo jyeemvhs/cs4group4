@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+      <meta charset="utf-8"/>
+      <style>
+ body {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgba(0,0,0,1) 3%, rgba(153, 0, 0,1) 38%, rgba(0, 0, 0,1) 68%, rgba(153, 0, 0,1) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+        .buttons {
+          visibility: hidden;
+          float: bottom;
+        }
+</style>     
+  <title>Game Over</title>
+  </head>
+  <link rel="icon" type="image/jpg" href="https://www.shamesjcc.org/wp-content/uploads/2022/04/no-scam.jpg">
+
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>  
+    <h1 style="color:white;" id="session">Uh Oh! Looks like this website is not secure! 112 viruses dectected on your device.</h1>
+    <p style="color:white;">Click <a href="./session">here</a> to go back </p> 
+    
+    <div id="logout">
+      <input id="logout" type="button" value="Logout" style="position:fixed;bottom:0;left:0;"/>
+    </div>
+    <audio id="audio" loop src="https://deltarune.com/assets/audio/midi-spamton.mp3"></audio>
+    <input type="button" id="musicButton" value="Play Music" onclick="handleButtonClick()" style="position:fixed;bottom:0;right:0;">  
+
+    <script src="js/gameOver.js">
+</script> 
+</body>
+</html>

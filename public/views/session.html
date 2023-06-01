@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Totally Not a Scam</title>
+    <style>
+ body {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgba(0,255,0,1) 3%, rgba(0,204, 255,1) 38%, rgba(255,51,0,1) 68%, rgba(255, 0, 255,1) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+.buttons {
+  visibility: hidden;
+  float: bottom;
+}
+    .container {
+        margin: 0 auto;
+        width: 1500px;
+        height: 800px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        width: 10px;
+        height: 10px;
+        border: 1px #000 solid;
+        position: absolute;
+        background: red;
+        transition: 0.5s;
+        font-size: 10px;
+        cursor: pointer;
+      }
+      .ad {
+        margin: 0 auto;
+        position: relative;
+      }    
+      #Goal{
+        background-color:#9C8C42;
+        border: 2px solid #91782c;
+        color: #FFF;
+        text-align: center;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        z-index: -3;
+      }
+      .hover {
+        width: 180px;
+        height: 20px;
+        cursor: pointer;
+      }
+      .time {
+        font-size: 30px;
+        font-style: normal;
+      }
+      </style>
+  </head>
+<link rel="icon" type="image/jpg" href="https://www.shamesjcc.org/wp-content/uploads/2022/04/no-scam.jpg">
+</head>
+<body>
+  <h1 id="session">Free VBucks</h1>
+  <div id = "time" class = "time">Time:</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <section class="container">    
+    <section class="container" id = "container">
+      <div class="box" id = "box" type = "button">
+        X
+        <div id = "ad" class = "ad"> <img src = "https://img1.pnghut.com/t/12/5/17/EFddgzV25T/company-parody-advertisement-smile-artwork-yellow.jpg"></div>
+      </div>
+
+      <div class="box" id = "box2" type = "button">
+        X
+        <div id = "ad2" class = "ad"> <img src = "https://img1.pnghut.com/t/5/14/11/pTyYF0yyfC/fast-food-restaurant-logo-sign-burger-king.jpg"></div>
+      </div>
+
+      <div class="box" id = "box3" type = "button">
+        X
+        <div id = "ad3" class = "ad"> <img src = "https://w7.pngwing.com/pngs/771/173/png-transparent-logo-brand-parody-graphic-design-humour-design-white-label-text-thumbnail.png"></div>
+      </div>
+
+      <div class="box" id = "box4" type = "button">
+        X
+        <div id = "ad4" class = "ad"> <img src = "https://w7.pngwing.com/pngs/110/75/png-transparent-fruit-greed-apple-steve-jobs-corporation-business-capitalism-parody-thumbnail.png"></div>
+      </div>
+
+      <div type="button" id="Goal" value="Click Me for 1,000 VBucks" readonly>Click Me for 1,000 VBucks</div>  
+      <div class="hover" id = "hover"></div>
+    </section>
+    </section>
+
+    <audio id="audio" autoplay loop src="https://deltarune.com/assets/audio/midi-bigshot_byShinkoNetCavy.mp3
+"></audio>
+    <input type="button" id="musicButton" value="Play Music" onclick="handleButtonClick()" style="position:fixed;bottom:0;right:0;">    
+
+    <div id="logout">
+      <input id="logout" type="button" value="Logout" />
+    </div>
+   
+    <script src="js/session.js">
+</script>
+</body>
+</html>

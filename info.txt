@@ -1,0 +1,16 @@
+copy from MongoDBReal ./Data.js to ./Info.js and make changes.
+==========================
+In routesData.js add the following
+
+const myDatabase = require('./myDatabase');
+let db = new myDatabase();
+
+const Info= require('./Info');
+
+In routesData.js modify the commented code near the bottom.
+========================
+copy from MongoDBReal ./myDatabase.js to ./myDatabase.js and make changes.
+
+
+
+
