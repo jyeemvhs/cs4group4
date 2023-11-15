@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>CHAT</title>
+    	<script type="text/javascript" src="http://code.jquery.com/jquery-3.7.0.min.js"></script>
+    	<script src='/socket.io/socket.io.js'></script>
+		<link type="text/css" rel="stylesheet" href="../style/chat.css">
+	</head>
+	<body id="body" onload="checkCookie()">
+		<h1>Welcome to CHAT</h1>
+        <div id="points">Points: 0</div>
+        <br>
+        <a href="/store">Back to Shopping</a>
+        <a href="/library">Back to Library</a>
+        <br>
+        <label for="chatText">Text:</label>
+        <input id="chatText" type="text">
+		<div class="space">
+		<div id="listDiv">
+  		<ul id="list">
+  			<li></li>
+  		</ul>   
+  		</div>
+    <script src="js/chat.js"></script> 
+	</body>
+</html>
+
+
+
+

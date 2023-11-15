@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LIBRARY</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src='/socket.io/socket.io.js'></script>
+    <link type="text/css" rel="stylesheet" href="../style/library.css">
+  </head>
+  <body onload="checkCookie()" id="body">
+    <link rel="stylesheet" href="style.css">
+    <h1>Welcome to LIBRARY</h1>
+    <br>
+    <div id="links">
+      <a href="/chat">Back to Chatting</a>
+      <a href="/store">Back to Shopping</a>
+    </div>
+    <table id = "table" border = "2">
+      <br>
+      <legend>YOUR SONGS</legend>
+      <tr>
+        <th>Track</th>
+        <th>Title</th>
+        <th>Artist</th>
+        <th>Genre</th>
+        <th>Year</th>
+        <th>Listen</th>
+      </tr>
+    </table>  
+    <script src="js/library.js"></script> 
+  </body>
+</html>
+
+

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>STORE</title>
+      <script type="text/javascript" src="http://code.jquery.com/jquery-3.7.0.min.js"></script>
+      <script src='/socket.io/socket.io.js'></script>
+      <link type="text/css" rel="stylesheet" href="../style/store.css">
+    </head>
+    <body onload="checkCookie()" id="body">
+        <h1>Welcome to STORE</h1>
+    <div id="links">
+      <a href="/chat">Back to Chatting</a>
+      <a href="/library">Back to Library</a>
+    </div>
+    <div id="points">Points: 0</div>
+    <br>
+    <div>Each song is 200 points</div>
+    <div>
+      <label>Select Track:</label>
+      <input id="index" name="index" type="number" min="0"/>
+      <input id="buyButton" type="button" value="Purchase" />
+    </div>
+    <table id = "table" border = "2">
+      <br>
+      <tr>
+        <th>Track</th>
+        <th>Title</th>
+        <th>Artist</th>
+        <th>Genre</th>
+        <th>Year</th>
+        <th>TRIAL</th>
+
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Island in the Sun</td>
+        <td>Weezer</td>
+        <td>Rock</td>
+        <td>2001</td>
+         <td>
+          <audio src="./songs/island.mp3" controls ontimeupdate="trialStop(this)"></audio>
+
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Paradise</td>
+        <td>John Prine</td>
+        <td>Country</td>
+        <td>1971</td>
+         <td>
+          <audio src="./songs/paradise.mp3" controls ontimeupdate="trialStop(this)"></audio>
+
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Cross Road Blues</td>
+        <td>Robert Johnson</td>
+        <td>Blues</td>
+        <td>1936</td>
+         <td>
+          <audio src="./songs/crossroad.mp3" controls ontimeupdate="trialStop(this)"></audio>
+
+        </td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>West End</td>
+        <td>Louis Armstrong</td>
+        <td>Jazz</td>
+        <td>1928</td>
+         <td>
+          <audio src="./songs/westend.mp3" controls ontimeupdate="trialStop(this)"></audio>
+
+        </td>
+      </tr>
+ 
+      <tr>
+        <td>5</td>
+        <td>Paper Money</td>
+        <td>Montrose</td>
+        <td>Rock</td>
+        <td>1974</td>
+         <td>
+          <audio src="./songs/papermoney.mp3" controls ontimeupdate="trialStop(this)"></audio>
+
+        </td>
+      </tr>
+
+       <tr>
+        <td>6</td>
+        <td>Axel F</td>
+        <td>Crazy Frog</td>
+        <td>Electronic</td>
+        <td>2005</td>
+        <td>
+          <audio src="./songs/crazyfrog.mp3" controls ontimeupdate="trialStop(this)"></audio>
+
+        </td>
+      </tr>
+
+       <tr>
+        <td>7</td>
+        <td>Dvorak</td>
+        <td>Symphony No. 9, Movement 4</td>
+        <td>Classical</td>
+        <td>1893</td>
+         <td>
+          <audio src="./songs/symphony.mp3" controls ontimeupdate="trialStop(this)"></audio>
+
+        </td>
+      </tr>
+
+        <tr>
+        <td>8</td>
+        <td>Truly Yours</td>
+        <td>The Spinners</td>
+        <td>Soul</td>
+        <td>1966</td>
+         <td>
+          <audio src="./songs/truly.mp3" controls ontimeupdate="trialStop(this)"></audio>
+
+        </td>
+      </tr>
+
+        <tr>
+        <td>9</td>
+        <td>Rainbow</td>
+        <td>Eddie Lang</td>
+        <td>Guitar Solo</td>
+        <td>1928</td>
+         <td>
+          <audio src="./songs/rainbow.mp3" controls ontimeupdate="trialStop(this)"></audio>
+
+        </td>
+      </tr>
+
+       <tr>
+        <td>10</td>
+        <td>Billie Jean</td>
+        <td>Michael Jackson</td>
+        <td>Post-Disco</td>
+        <td>1982</td>
+         <td>
+          <audio src="./songs/billie.mp3" controls ontimeupdate="trialStop(this)"></audio>
+        </td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>Margaritaville</td>
+        <td>Jimmy Buffett</td>
+        <td>Soft Rock</td>
+        <td>1977</td>
+         <td>
+          <audio src="./songs/margarita.mp3" controls ontimeupdate="trialStop(this)"></audio>
+
+        </td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>Africa</td>
+        <td>Toto</td>
+        <td>Pop</td>
+        <td>1982</td>
+         <td>
+          <audio src="./songs/africa.mp3" controls ontimeupdate="trialStop(this)"></audio>
+
+        </td>
+      </tr>
+          <tr>
+        <td>13</td>
+        <td>Black Hole Sun</td>
+        <td>Soundgarden</td>
+        <td>Rock</td>
+        <td>1994</td>
+         <td>
+          <audio src="./songs/blackhole.mp3" controls ontimeupdate="trialStop(this)"></audio>
+
+        </td>
+      </tr>
+         <tr>
+        <td>14</td>
+        <td>Radio Radio</td>
+        <td>Elvis Costello</td>
+        <td>Rock</td>
+        <td>1978</td>
+         <td>
+          <audio src="./songs/radio.mp3" controls ontimeupdate="trialStop(this)"></audio>
+
+        </td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>Mood</td>
+        <td>Miles Davis</td>
+        <td>Modern Jazz</td>
+        <td>1965</td>
+         <td>
+          <audio src="./songs/mood.mp3" controls ontimeupdate="trialStop(this)"></audio>
+
+        </td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>Chocolate Rain</td>
+        <td>Tay Zonday</td>
+        <td>Pop</td>
+        <td>2007</td>
+         <td>
+          <audio src="./songs/chocolate.mp3" controls ontimeupdate="trialStop(this)"></audio>
+
+        </td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td>Swampy River</td>
+        <td>Duke Ellington</td>
+        <td>Piano Solo</td>
+        <td>1928</td>
+         <td>
+          <audio src="./songs/swampy.mp3" controls ontimeupdate="trialStop(this)"></audio>
+
+        </td>
+      </tr>
+         <tr>
+        <td>18</td>
+        <td>World Leave Me Alone</td>
+        <td>Ambrosia</td>
+        <td>Rock</td>
+        <td>1975</td>
+         <td>
+          <audio src="./songs/alone.mp3" controls ontimeupdate="trialStop(this)"></audio>
+
+        </td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td>Amish Paradise</td>
+        <td>"Weird" Al Yankovic</td>
+        <td>Parody</td>
+        <td>1999</td>
+         <td>
+          <audio src="./songs/amish.mp3" controls ontimeupdate="trialStop(this)"></audio>
+
+        </td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td>School Days</td>
+        <td>Stanley Clark</td>
+        <td>Jazz Fusion</td>
+        <td>1976</td>
+         <td>
+          <audio src="./songs/school.mp3" controls ontimeupdate="trialStop(this)"></audio>
+
+        </td>
+      </tr>
+    </table>
+    <script src="js/store.js"></script> 
+    </body>
+</html>
+
+

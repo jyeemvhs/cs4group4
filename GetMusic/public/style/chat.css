@@ -1,0 +1,48 @@
+body{
+  font-family: "Comic Sans MS", serif;
+  background-color: gray;
+  text-align: center;
+}
+
+span{
+  font-weight: bold;
+}
+
+a{
+  float: center;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 6px 16px;
+  background-color: #333; 
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 12px;
+}
+
+#list{
+  text-align: left;
+  list-style-type: none;
+}
+
+#listDiv{
+  border-radius: 5px;
+  background-color: Silver;
+  border:solid;
+  height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#id,#name,#chatText{
+  border:solid;
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+.space{
+  padding: 10px
+}
+
+#chatText{
+  margin-top: 15px;
+}
